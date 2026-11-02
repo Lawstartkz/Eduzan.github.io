@@ -1,2 +1,2 @@
-# EduZan.github.io
+# EduZan
 Educational project for legal studies and Legal English.
