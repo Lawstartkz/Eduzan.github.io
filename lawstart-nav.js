@@ -20,6 +20,7 @@ function go(hash){var id=decodeURIComponent(hash.replace(/^#/,''));var el=reveal
  if(!el.hasAttribute('tabindex'))el.setAttribute('tabindex','-1');try{el.focus({preventScroll:true})}catch(e){}return true}
 document.addEventListener('click',function(ev){var a=ev.target.closest?ev.target.closest('.mm a,#sitemap a,.qj a,.route a'):null;if(!a)return;var h=a.getAttribute('href');if(!h||h.charAt(0)!=='#'||h.length<2)return;
  if(document.getElementById(decodeURIComponent(h.slice(1)))){ev.preventDefault();closeAll();go(h);if(h==='#sitemap-search'){var q=document.getElementById('sm-q');if(q)setTimeout(function(){q.focus()},350)}}});
+if(location.hash==='#sitemap-search'){var sq0=document.getElementById('sm-q');if(sq0)setTimeout(function(){sq0.focus()},350)}
 window.addEventListener('hashchange',function(){if(location.hash.length>1)reveal(decodeURIComponent(location.hash.slice(1)))});
 if(location.hash.length>1){var el0=reveal(decodeURIComponent(location.hash.slice(1)));if(el0)setTimeout(function(){el0.scrollIntoView()},0)}
 })();
