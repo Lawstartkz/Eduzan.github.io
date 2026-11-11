@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lawstartkz.github.io/sitemap.xml
+Sitemap: https://lawstartkz.github.io/Eduzan.github.io/sitemap.xml
