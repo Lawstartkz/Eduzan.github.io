@@ -442,3 +442,13 @@ h1.sec{font:700 clamp(26px,4vw,34px)/1.15 var(--display);letter-spacing:-.01em;m
 /* --- reorganization additions (four main pages) --- */
 .mm-panel a[aria-current="page"]{font-weight:700;background:var(--soft)}
 .pages-nav a{display:inline-block;margin-bottom:6px}
+
+/* ===== Переключатель языка ҚАЗ | РУС (один элемент в шапке страницы; виден на всех ширинах, не зависит от .mm-bar) ===== */
+.lang-sw{display:inline-flex;flex:0 0 auto;margin-left:auto;border:1.5px solid var(--brass);border-radius:999px;overflow:hidden;background:var(--card);font:600 14px var(--body)}
+.lang-sw a{display:inline-flex;align-items:center;justify-content:center;min-width:52px;min-height:44px;padding:0 14px;color:var(--ink);text-decoration:none;letter-spacing:.04em}
+.lang-sw a+a{border-left:1.5px solid var(--brass)}
+.lang-sw a[aria-current="page"]{background:var(--brass);color:var(--brass-ink);cursor:default}
+.lang-sw a:hover:not([aria-current="page"]){background:var(--soft)}
+.lang-sw a:focus-visible{outline:3px solid var(--brass);outline-offset:-3px}
+header.top .lang-sw{order:2}
+@media (max-width:560px){header.top .tag{order:3;flex:1 0 100%}}
