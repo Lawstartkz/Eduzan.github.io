@@ -1,5 +1,9 @@
-/* EduZan — қазақ тіліндегі каталог (kz/catalog.html). Деректер lawstart-catalog.js-тен ӨЗГЕРІССІЗ көшірілген (B, M, O, V);
-   қазақша атаулар data/universities_kk_names.json-нан алынады. Орысша каталог файлына тиіспейді. */
+
+/* EduZan — қазақ тіліндегі каталог (kz/kz-catalog.html).
+   B, M, O, V деректері өзгеріссіз сақталған.
+   Қазақша атаулар kz/universities_kk_names.json файлынан алынады.
+   Орысша каталог файлына тиіспейді. */
+
 const B=[
 ["Almaty Management University (AlmaU)","Алматы",[["6B04201","Юриспруденция"],["6B04205","Международное право"]]],
 ["Alikhan Bokeikhan University","Семей",[["6B04220","Юриспруденция"],["6B04221","Государственная служба и судебная система"],["6B04222","Следственно-прокурорская деятельность"],["6B12330","Правоохранительная деятельность","смежное направление (6B123), не 6B042"]]],
@@ -53,6 +57,7 @@ const B=[
 ["Баишев Университет","Актобе",[["6B04211","Правоведение: гражданско-правовое"],["6B04212","Правоведение: уголовно-правовое"],["6B04213","Правоведение: государственно-правовое"]]],
 ["Региональный университет инноваций (Regional Innovation University)","Шымкент",[["6B04206","Юриспруденция","по данным страницы вуза за 2025–2026 учебный год"]]]
 ];
+
 const M=[
 ["Maqsut Narikbayev University (MNU, бывший КазГЮУ)","Астана",[["7M04211","Юриспруденция","1 и 2 года; код 7M04211 — научно-педагогическое направление"],["","Международное право","2 года"],["","Право интеллектуальной собственности и бизнеса","1 год; требуется подтверждение английского (IELTS 6.0 и др.)"]]],
 ["Евразийский национальный университет имени Л. Н. Гумилёва","Астана",[["7M04201","Юриспруденция",""],["7M04202","Международное право",""],["7M04212","Международное право","профильное"]]],
@@ -71,6 +76,7 @@ const M=[
 ["Казахстанско-Американский свободный университет (KAFU)","Усть-Каменогорск",[["7M04201","Юриспруденция","степень магистра права: 1 год и 2 года"],["7M04202","Юриспруденция","степень магистра права: 1 год и 2 года"]]],
 ["Атырауский университет имени Х. Досмухамедова","Атырау",[["7M04201","Юриспруденция","2 года"],["7M04211","Юриспруденция","1 год"],["7M04212","Адвокатура және нотариальная деятельность","1 год"],["7M04213","Этномедиация","1 год"]]]
 ];
+
 const O=[
 ["Астана","Университет «Туран-Астана»"],
 ["Алматы","Казахский национальный университет имени аль-Фараби; Казахский национальный аграрный исследовательский университет; Каспийский общественный университет; Евразийский технологический университет; Q University; Алматинский гуманитарно-экономический университет; META University; Международный транспортно-гуманитарный университет"],
@@ -90,6 +96,7 @@ const O=[
 ["Актау","Каспийский университет технологий и инжиниринга имени Ш. Есенова (Yessenov University)"],
 ["Уральск","Казахстанский университет инновационных и телекоммуникационных систем"]
 ];
+
 const V={
 "Карагандинский национальный исследовательский университет имени академика Е. А. Букетова|Бакалавриат":{d:"06.10.2026",f:[["Источник","страницы кафедр на сайте вуза"],["Не указано","срок, язык, стоимость, набор 2026, госзаказ"],["Госзаказ","вуз участвует в распределении госзаказа по группе B049 (НЦТ, 2026–2027); места распределяются по группе, а не по конкретной программе"]]},
 "Карагандинский национальный исследовательский университет имени академика Е. А. Букетова|Магистратура":{d:"06.10.2026",f:[["Источник","страницы кафедр на сайте вуза"],["Не указано","срок, язык, стоимость, набор 2026"],["Госзаказ","отдельно не проверялся"]]},
@@ -97,79 +104,95 @@ const V={
 "Maqsut Narikbayev University (MNU, бывший КазГЮУ)|Бакалавриат":{d:"04.10.2026",u:"https://admission.mnu.kz/ru/programs/bachelor",f:[["Срок","4 года"],["Стоимость","55 000 ₸ за кредит; 3 300 000 ₸ в год (60 кредитов), 2026"],["Госзаказ","вуз участвует в распределении госзаказа по группе B049 (НЦТ, 2026–2027); места распределяются по группе, а не по конкретной программе"],["Не указано","код ОП, язык обучения"]]},
 "Maqsut Narikbayev University (MNU, бывший КазГЮУ)|Магистратура":{d:"04.10.2026",u:"https://admission.mnu.kz/ru/programs/master",f:[["Группа","M078"],["Срок","указан у каждой программы"],["Не указано","код ОП (код 7M04211 — по реестру ОП epvo.kz), язык обучения, стоимость"],["Госзаказ","отдельно не проверялся"]]}
 };
+
 (function(){
-var KB='Бакалавриат',KM='Магистратура';
-var LV={},LK={};LV[KB]='Бакалавриат';LV[KM]='Магистратура';LK[KB]='B';LK[KM]='M';
-var CITY={"Алматы":"Алматы","Семей":"Семей","Атырау":"Атырау","Астана":"Астана","Усть-Каменогорск":"Өскемен","Костанай":"Қостанай","Актау":"Ақтау","Кызылорда":"Қызылорда","Уральск":"Орал","Павлодар":"Павлодар","Кокшетау":"Көкшетау","Тараз":"Тараз","Петропавловск":"Петропавл","Каскелен":"Қаскелең","Шымкент":"Шымкент","Актобе":"Ақтөбе","Талдыкорган":"Талдықорған","Туркестан":"Түркістан","Караганда":"Қарағанды"};
-var NOTE={partial:'Қазақша атауы толық расталмаған',unconfirmed:'Қазақша атауы расталмаған',conflict:'Ресми материалдарда атаудың нұсқалары қайшы келеді'};
-function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
-function ru(t,c,x){var e=el(t,c,x);e.lang='ru';return e}
-function norm(s){return String(s||'').toLowerCase().replace(/ё/g,'е')}
-function cityKk(c){return CITY[c]||c}
-var items=[],AL={"Евразийская юридическая академия имени Д. Кунаева":"Университет Кунаева","Костанайский региональный университет имени А. Байтурсынова":"Костанайский региональный университет имени Ахмет Байтұрсынұлы"};
-B.forEach(function(u){items.push({u:u[0],c:u[1],l:KB,r:u[2].map(function(x){return [x[0],x[1],x[2]||'',KB]})})});
-M.forEach(function(u){var t=AL[u[0]],host=null;
- if(t){items.forEach(function(i){if(i.u===t&&i.l===KB)host=i})}
- var rs=u[2].map(function(x){return [x[0],x[1],x[2]||'',KM]});
- if(host){host.ls=[KB,KM];host.l='both';host.r=host.r.concat(rs)}
- else{items.push({u:u[0],c:u[1],l:KM,r:rs})}});
-var N={};  // catalog_key / alias -> registry record
-var sel=document.getElementById('city'),list=document.getElementById('list'),cnt=document.getElementById('count'),other=document.getElementById('other'),ol=document.getElementById('olist');
-var st={q:'',c:'',l:''};
-var cities=[].concat(items.map(function(i){return i.c}),O.map(function(o){return o[0]}));
-cities=cities.filter(function(c,i){return cities.indexOf(c)===i}).sort(function(a,b){return cityKk(a).localeCompare(cityKk(b),'kk')});
-cities.forEach(function(c){var o=el('option','',cityKk(c));o.value=c;sel.appendChild(o)});
-function rec(u){return N[u]||null}
-function lvLabel(it,lv){return it.ls?(lv?LV[lv]:LV[KB]+' және '+LV[KM].toLowerCase()):LV[it.l]}
-function render(){
- var q=norm(st.q.trim());list.textContent='';var shown=0,progs=0,seen={};
- items.forEach(function(it){
-  if(st.l&&(it.ls||[it.l]).indexOf(st.l)<0)return;
-  if(st.c&&it.c!==st.c)return;
-  var rows=it.r,R=rec(it.u);
-  if(st.l&&it.ls){rows=rows.filter(function(r){return r[3]===st.l})}
-  if(q){var head=norm(it.u+' '+it.c+' '+cityKk(it.c)+(R?' '+[R.name_kk,R.brand_as_published,R.legal_name_kk,R.aliases.join(' ')].join(' '):''));
-   if(head.indexOf(q)<0){rows=rows.filter(function(r){return norm(r[0]+' '+r[1]+' '+r[2]).indexOf(q)>=0})}
-   if(!rows.length)return}
-  var card=el('article','uni');
-  var h=el('h3');
-  if(R&&R.name_kk){h.textContent=R.name_kk}
-  else if(R&&R.brand_as_published){h.textContent=R.brand_as_published}
-  else{var s=ru('span','',it.u);h.appendChild(s)}
-  card.appendChild(h);
-  if(R&&R.legal_name_kk)card.appendChild(el('p','meta','Заңды атауы: '+R.legal_name_kk));
-  card.appendChild(el('p','meta',cityKk(it.c)+' · '+lvLabel(it,st.l)));
-  if(R&&NOTE[R.verification_status])card.appendChild(el('p','meta nm',NOTE[R.verification_status]));
-  var site=R&&R.official_site;
-  if(site){var wp=el('p','wl');var wa=el('a','','\uD83C\uDF10 Ресми сайт');wa.href=site;wa.target='_blank';wa.rel='noopener noreferrer';wp.appendChild(wa);card.appendChild(wp)}
-  function addRows(rs){var ul=el('ul');
-   rs.forEach(function(r){var li=el('li');li.appendChild(r[0]?el('code','',r[0]):el('code','nocode','ОП коды бастапқы деректерде көрсетілмеген'));
-    var d=ru('div','',r[1]);if(r[2]){d.appendChild(el('em','',r[2]))}
-    li.appendChild(d);ul.appendChild(li);progs++});
-   card.appendChild(ul)}
-  if(it.ls&&!st.l){it.ls.forEach(function(L){var rs=rows.filter(function(r){return r[3]===L});if(rs.length){card.appendChild(el('p','meta lv',LV[L]));addRows(rs)}})}
-  else{addRows(rows)}
-  (it.ls?(st.l?[st.l]:it.ls):[it.l]).forEach(function(LVn){var v=V[it.u+'|'+LVn];
-   if(v){var vb=el('div','ver');vb.appendChild(el('span','ok','Бағдарлама ЖОО сайтымен салыстырылған'));
-    var dl=ru('dl');v.f.forEach(function(x){dl.appendChild(el('dt','',x[0]));dl.appendChild(el('dd','',x[1]))});vb.appendChild(dl);
-    var vs=el('p','vs','Соңғы тексеру: '+v.d+'. Жоғарыда көрсетілмеген мәліметтер әлі расталмаған. ');
-    if(v.u){var a=el('a','','Ресми бет');a.href=v.u;a.target='_blank';a.rel='noopener noreferrer';vs.appendChild(a)}
-    vb.appendChild(vs);card.appendChild(vb)}});
-  list.appendChild(card);shown++;seen[it.u]=1});
- cnt.textContent=shown?('Негізгі каталогта: ЖОО — '+Object.keys(seen).length+' · бағдарламалар — '+progs+'. Бағдарламалардың жеке жазбалары есептеледі; сабақтас бағдарламалар бөлек белгіленген. «Қосымша тексеру» блогындағы ЖОО бұл көрсеткіштерге кірмейді. Дереккөз: ашық дереккөздер, ең алдымен университеттердің сайттары. «Бағдарлама салыстырылған» белгісі бағдарлама атауы мен коды ЖОО-ның ресми бетімен салыстырылғанын білдіреді, қалған карточкалар тексерілуде. Шарттар өзгеруі мүмкін — ЖОО-ның ресми сайтынан нақтылаңыз. Жаңартылған: 2026 жылғы 6 қазан.'):'';
- if(!shown){list.appendChild(el('p','empty','Ештеңе табылмады. Басқа сұранысты көріңіз немесе сүзгілерді тазалаңыз.'))}
- ol.textContent='';var any=0;
- O.forEach(function(o){if(st.c&&o[0]!==st.c)return;if(q&&norm(o[0]+' '+cityKk(o[0])+' '+o[1]).indexOf(q)<0)return;
-  ol.appendChild(el('dt','',cityKk(o[0])));ol.appendChild(ru('dd','',o[1]));any++});
- other.hidden=(st.l===KB)||!any}
-function start(){
- document.getElementById('q').addEventListener('input',function(e){st.q=e.target.value;render()});
- sel.addEventListener('change',function(e){st.c=e.target.value;render()});
- document.getElementById('lvl').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;var k=b.getAttribute('data-l');
-  st.l=k==='B'?KB:(k==='M'?KM:'');
-  document.querySelectorAll('#lvl .chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});render()});
- render()}
-fetch('../data/universities_kk_names.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(j){
- j.universities.forEach(function(u){N[u.catalog_key]=u;u.aliases.forEach(function(a){N[a]=u})})}).catch(function(){
- var m=el('p','note','Қазақша атаулар файлы жүктелмеді: ЖОО атаулары орысша көрсетіледі.');list.parentNode.insertBefore(m,list)}).then(start);
+ var KB='Бакалавриат',KM='Магистратура';
+ var LV={},LK={};LV[KB]='Бакалавриат';LV[KM]='Магистратура';LK[KB]='B';LK[KM]='M';
+ var CITY={"Алматы":"Алматы","Семей":"Семей","Атырау":"Атырау","Астана":"Астана","Усть-Каменогорск":"Өскемен","Костанай":"Қостанай","Актау":"Ақтау","Кызылорда":"Қызылорда","Уральск":"Орал","Павлодар":"Павлодар","Кокшетау":"Көкшетау","Тараз":"Тараз","Петропавловск":"Петропавл","Каскелен":"Қаскелең","Шымкент":"Шымкент","Актобе":"Ақтөбе","Талдыкорган":"Талдықорған","Туркестан":"Түркістан","Караганда":"Қарағанды"};
+ var NOTE={partial:'Қазақша атауы толық расталмаған',unconfirmed:'Қазақша атауы расталмаған',conflict:'Ресми материалдарда атаудың нұсқалары қайшы келеді'};
+ function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
+ function ru(t,c,x){var e=el(t,c,x);e.lang='ru';return e}
+ function norm(s){return String(s||'').toLowerCase().replace(/ё/g,'е')}
+ function cityKk(c){return CITY[c]||c}
+ var items=[],AL={"Евразийская юридическая академия имени Д. Кунаева":"Университет Кунаева","Костанайский региональный университет имени А. Байтурсынова":"Костанайский региональный университет имени Ахмет Байтұрсынұлы"};
+ B.forEach(function(u){items.push({u:u[0],c:u[1],l:KB,r:u[2].map(function(x){return [x[0],x[1],x[2]||'',KB]})})});
+ M.forEach(function(u){var t=AL[u[0]],host=null;
+  if(t){items.forEach(function(i){if(i.u===t&&i.l===KB)host=i})}
+  var rs=u[2].map(function(x){return [x[0],x[1],x[2]||'',KM]});
+  if(host){host.ls=[KB,KM];host.l='both';host.r=host.r.concat(rs)}
+  else{items.push({u:u[0],c:u[1],l:KM,r:rs})}});
+ var N={};
+ var sel=document.getElementById('city'),list=document.getElementById('list'),cnt=document.getElementById('count'),other=document.getElementById('other'),ol=document.getElementById('olist');
+ var st={q:'',c:'',l:''};
+ var cities=[].concat(items.map(function(i){return i.c}),O.map(function(o){return o[0]}));
+ cities=cities.filter(function(c,i){return cities.indexOf(c)===i}).sort(function(a,b){return cityKk(a).localeCompare(cityKk(b),'kk')});
+ cities.forEach(function(c){var o=el('option','',cityKk(c));o.value=c;sel.appendChild(o)});
+ function rec(u){return N[u]||null}
+ function lvLabel(it,lv){return it.ls?(lv?LV[lv]:LV[KB]+' және '+LV[KM].toLowerCase()):LV[it.l]}
+ function render(){
+  var q=norm(st.q.trim());list.textContent='';var shown=0,progs=0,seen={};
+  items.forEach(function(it){
+   if(st.l&&(it.ls||[it.l]).indexOf(st.l)<0)return;
+   if(st.c&&it.c!==st.c)return;
+   var rows=it.r,R=rec(it.u);
+   if(st.l&&it.ls){rows=rows.filter(function(r){return r[3]===st.l})}
+   if(q){var head=norm(it.u+' '+it.c+' '+cityKk(it.c)+(R?' '+[R.name_kk,R.brand_as_published,R.legal_name_kk,(Array.isArray(R.aliases)?R.aliases:[]).join(' ')].join(' '):''));
+    if(head.indexOf(q)<0){rows=rows.filter(function(r){return norm(r[0]+' '+r[1]+' '+r[2]).indexOf(q)>=0})}
+    if(!rows.length)return}
+   var card=el('article','uni');
+   var h=el('h3');
+   if(R&&R.name_kk){h.textContent=R.name_kk}
+   else if(R&&R.brand_as_published){h.textContent=R.brand_as_published}
+   else{var s=ru('span','',it.u);h.appendChild(s)}
+   card.appendChild(h);
+   if(R&&R.legal_name_kk)card.appendChild(el('p','meta','Заңды атауы: '+R.legal_name_kk));
+   card.appendChild(el('p','meta',cityKk(it.c)+' · '+lvLabel(it,st.l)));
+   if(R&&NOTE[R.verification_status])card.appendChild(el('p','meta nm',NOTE[R.verification_status]));
+   var site=R&&R.official_site;
+   if(site){var wp=el('p','wl');var wa=el('a','','🌐 Ресми сайт');wa.href=site;wa.target='_blank';wa.rel='noopener noreferrer';wp.appendChild(wa);card.appendChild(wp)}
+   function addRows(rs){var ul=el('ul');
+    rs.forEach(function(r){var li=el('li');li.appendChild(r[0]?el('code','',r[0]):el('code','nocode','ОП коды бастапқы деректерде көрсетілмеген'));
+     var d=ru('div','',r[1]);if(r[2]){d.appendChild(el('em','',r[2]))}
+     li.appendChild(d);ul.appendChild(li);progs++});
+    card.appendChild(ul)}
+   if(it.ls&&!st.l){it.ls.forEach(function(L){var rs=rows.filter(function(r){return r[3]===L});if(rs.length){card.appendChild(el('p','meta lv',LV[L]));addRows(rs)}})}
+   else{addRows(rows)}
+   (it.ls?(st.l?[st.l]:it.ls):[it.l]).forEach(function(LVn){var v=V[it.u+'|'+LVn];
+    if(v){var vb=el('div','ver');vb.appendChild(el('span','ok','Бағдарлама ЖОО сайтымен салыстырылған'));
+     var dl=ru('dl');v.f.forEach(function(x){dl.appendChild(el('dt','',x[0]));dl.appendChild(el('dd','',x[1]))});vb.appendChild(dl);
+     var vs=el('p','vs','Соңғы тексеру: '+v.d+'. Жоғарыда көрсетілмеген мәліметтер әлі расталмаған. ');
+     if(v.u){var a=el('a','','Ресми бет');a.href=v.u;a.target='_blank';a.rel='noopener noreferrer';vs.appendChild(a)}
+     vb.appendChild(vs);card.appendChild(vb)}});
+   list.appendChild(card);shown++;seen[it.u]=1});
+  cnt.textContent=shown?('Негізгі каталогта: ЖОО — '+Object.keys(seen).length+' · бағдарламалар — '+progs+'. Бағдарламалардың жеке жазбалары есептеледі; сабақтас бағдарламалар бөлек белгіленген. «Қосымша тексеру» блогындағы ЖОО бұл көрсеткіштерге кірмейді. Дереккөз: ашық дереккөздер, ең алдымен университеттердің сайттары. «Бағдарлама салыстырылған» белгісі бағдарлама атауы мен коды ЖОО-ның ресми бетімен салыстырылғанын білдіреді, қалған карточкалар тексерілуде.\nШарттар өзгеруі мүмкін — ЖОО-ның ресми сайтынан нақтылаңыз. Жаңартылған: 2026 жылғы 6 қазан.'):'';
+  if(!shown){list.appendChild(el('p','empty','Ештеңе табылмады. Басқа сұранысты көріңіз немесе сүзгілерді тазалаңыз.'))}
+  ol.textContent='';var any=0;
+  O.forEach(function(o){if(st.c&&o[0]!==st.c)return;if(q&&norm(o[0]+' '+cityKk(o[0])+' '+o[1]).indexOf(q)<0)return;
+   ol.appendChild(el('dt','',cityKk(o[0])));ol.appendChild(ru('dd','',o[1]));any++});
+  other.hidden=(st.l===KB)||!any}
+ function start(){
+  document.getElementById('q').addEventListener('input',function(e){st.q=e.target.value;render()});
+  sel.addEventListener('change',function(e){st.c=e.target.value;render()});
+  document.getElementById('lvl').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;var k=b.getAttribute('data-l');
+   st.l=k==='B'?KB:(k==='M'?KM:'');
+   document.querySelectorAll('#lvl .chip').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});render()});
+  render()}
+ fetch('universities_kk_names.json').then(function(r){
+  if(!r.ok)throw new Error('HTTP '+r.status);
+  return r.json();
+ }).then(function(j){
+  if(!j||!Array.isArray(j.universities)){
+   throw new Error('Некорректная структура JSON');
+  }
+  j.universities.forEach(function(u){
+   if(!u||!u.catalog_key)return;
+   N[u.catalog_key]=u;
+   (Array.isArray(u.aliases)?u.aliases:[]).forEach(function(a){
+    if(a)N[a]=u;
+   });
+  });
+ }).catch(function(){
+  var m=el('p','note','Қазақша атаулар файлы жүктелмеді: ЖОО атаулары орысша көрсетіледі.');
+  list.parentNode.insertBefore(m,list);
+ }).then(start);
 })();
