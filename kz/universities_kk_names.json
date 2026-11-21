@@ -1,0 +1,913 @@
+{
+ "_meta": {
+  "generated": "2026-11-20",
+  "source": "EduZan_universities_kk_verified.csv",
+  "note": "Файл-справочник. Каталог сайта его пока не читает. Соединение с каталогом — по catalog_key (точное имя вуза в lawstart-catalog.js) либо по id (порядок в массиве B, №52 — только магистратура). Пустое name_kk не заполнять догадкой.",
+  "count": 52
+ },
+ "universities": [
+  {
+   "id": 1,
+   "catalog_key": "Almaty Management University (AlmaU)",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://almau.edu.kz/ru/study/spl/",
+   "name_kk": "",
+   "brand_as_published": "AlmaU / Almaty Management University",
+   "legal_name_kk": "«Алматы Менеджмент Университеті» Білім беру мекемесі",
+   "verification_status": "partial",
+   "source_url": "https://almau.edu.kz/study/sayasat-zh-ne-y-mektebi/",
+   "verification_note": "partial: публичный казахский заголовок не подтверждён, name_kk пусто. На kk-странице вуза используется латинский бренд. Юридическое название «Алматы Менеджмент Университеті» Білім беру мекемесі указано по уставу AlmaU (решение владельца); URL устава в таблице источников не приведён, ссылка на устав не добавлялась. Проверка публичных названий ≠ проверка юрнаименования по уставу."
+  },
+  {
+   "id": 2,
+   "catalog_key": "Alikhan Bokeikhan University",
+   "aliases": [],
+   "city": "Семей",
+   "city_kk": "Семей",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://abu.edu.kz/ru/home",
+   "name_kk": "Әлихан Бөкейхан университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://abu.edu.kz/ru/home",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Сайт при моих проверках отвечал серверной ошибкой."
+  },
+  {
+   "id": 3,
+   "catalog_key": "Атырауский университет имени Х. Досмухамедова",
+   "aliases": [],
+   "city": "Атырау",
+   "city_kk": "Атырау",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://atyrau.edu.kz/ru/",
+   "name_kk": "Халел Досмұхамедұлы атындағы Атырау университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://atyrau.edu.kz/kz/MediaResources/Details/3489",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 4,
+   "catalog_key": "Евразийский национальный университет имени Л. Н. Гумилёва",
+   "aliases": [],
+   "city": "Астана",
+   "city_kk": "Астана",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://enu.kz/ru",
+   "name_kk": "Л.Н.Гумилев атындағы Еуразия ұлттық университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://enu.kz/kz/page/university/about-us",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Замечание: при моей проверке полная форма найдена в title/meta kk-страниц «Біз туралы» и реквизитов; в видимом тексте — «ЕҰУ»."
+  },
+  {
+   "id": 5,
+   "catalog_key": "Казахский национальный университет имени аль-Фараби",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://farabi.university/postupayushchim?lang=ru",
+   "name_kk": "Әл-Фараби атындағы Қазақ ұлттық университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://farabi.university/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 6,
+   "catalog_key": "Казахский национальный педагогический университет имени Абая",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://abai.university/ru",
+   "name_kk": "Абай атындағы Қазақ ұлттық педагогикалық университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://abai.university/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 7,
+   "catalog_key": "Каспийский университет",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://cu.edu.kz/",
+   "name_kk": "Каспий қоғамдық университет",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://cu.edu.kz/kk/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Форма записана БЕЗ конечной «і» по решению владельца. Замечание: ранее в официальном уведомлении на kk-главной cu.edu.kz/kk/ мной наблюдалась форма «Каспий қоғамдық университеті» (с «і») — расхождение к сверке по уставу. Не смешивать с №12 Yessenov и с Каспийским университетом технологий и инжиниринга (Актау)."
+  },
+  {
+   "id": 8,
+   "catalog_key": "Казахстанско-Американский свободный университет (KAFU)",
+   "aliases": [],
+   "city": "Усть-Каменогорск",
+   "city_kk": "Өскемен",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://kafu.edu.kz/ru/admission/",
+   "name_kk": "Қазақстан-Американдық еркін университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://kafu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 9,
+   "catalog_key": "Казахский университет международных отношений и мировых языков имени Абылай хана",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://www.ablaikhan.kz/ru/for-applicants/for-applicants/our-faculties.html",
+   "name_kk": "Абылай хан атындағы Қазақ халықаралық қатынастар және әлем тілдері университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://www.ablaikhan.kz/kz/about-us/about-us.html",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 10,
+   "catalog_key": "Университет Кунаева",
+   "aliases": [
+    "Евразийская юридическая академия имени Д. Кунаева"
+   ],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://vuzkunaeva.kz",
+   "name_kk": "",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "unconfirmed",
+   "source_url": "https://vuzkunaeva.kz",
+   "verification_note": "unconfirmed: публичное казахское название не подтверждено, name_kk пусто. Источник — официальный сайт вуза; он отклонял автоматический доступ (robots), нужна ручная проверка. Рабочий вариант «Қонаев Университеті» из прежнего ТЗ не подтверждён и в реестр не внесён."
+  },
+  {
+   "id": 11,
+   "catalog_key": "Костанайский региональный университет имени Ахмет Байтұрсынұлы",
+   "aliases": [
+    "Костанайский региональный университет имени А. Байтурсынова"
+   ],
+   "city": "Костанай",
+   "city_kk": "Қостанай",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://ksu.edu.kz/ru/",
+   "name_kk": "Ахмет Байтұрсынұлы атындағы Қостанай өңірлік университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://ksu.edu.kz/kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 12,
+   "catalog_key": "Yessenov University",
+   "aliases": [],
+   "city": "Актау",
+   "city_kk": "Ақтау",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://yu.edu.kz/ru/priemnaya-komissiya/",
+   "name_kk": "",
+   "brand_as_published": "Yessenov University",
+   "legal_name_kk": "",
+   "verification_status": "confirmed_brand",
+   "source_url": "https://yu.edu.kz/qabyldau-ofisi/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Бренд — отдельное поле; юридическое название в таблице решений не приведено, поле legal_name_kk пусто."
+  },
+  {
+   "id": 13,
+   "catalog_key": "Кызылординский университет имени Коркыт Ата",
+   "aliases": [],
+   "city": "Кызылорда",
+   "city_kk": "Қызылорда",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://korkyt.edu.kz/ru/staticpages/252",
+   "name_kk": "Қорқыт Ата атындағы Қызылорда университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://korkyt.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 14,
+   "catalog_key": "Казахский национальный аграрный исследовательский университет (КазНАИУ)",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://www.kaznaru.edu.kz",
+   "name_kk": "Қазақ ұлттық аграрлық зерттеу университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://kaznaru.edu.kz/kz/university/about",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 15,
+   "catalog_key": "ESIL University (бывший КазУЭФМТ)",
+   "aliases": [],
+   "city": "Астана",
+   "city_kk": "Астана",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://esil.edu.kz/entrant/",
+   "name_kk": "",
+   "brand_as_published": "ESIL University",
+   "legal_name_kk": "",
+   "verification_status": "confirmed_brand",
+   "source_url": "https://esil.edu.kz/applicants",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Бренд — отдельное поле; юридическая форма в таблице решений не приведена, legal_name_kk пусто. Мой доступ к kk-версии сайта не получен (переключатель языка работает скриптом)."
+  },
+  {
+   "id": 16,
+   "catalog_key": "Западно-Казахстанский университет имени Махамбета Утемисова",
+   "aliases": [],
+   "city": "Уральск",
+   "city_kk": "Орал",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://wku.edu.kz/ru/",
+   "name_kk": "М. Өтемісов атындағы Батыс Қазақстан университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://wku.edu.kz/images/kodeks301024-2.pdf",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 17,
+   "catalog_key": "Инновационный Евразийский университет (ИнЕУ)",
+   "aliases": [],
+   "city": "Павлодар",
+   "city_kk": "Павлодар",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://ineu.edu.kz/ru/",
+   "name_kk": "Инновациялық Еуразия университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://ineu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Замечание: на странице вуза ранее наблюдалась форма с заглавной «Университеті»; по решению владельца записана строчная «университеті»."
+  },
+  {
+   "id": 18,
+   "catalog_key": "Кызылординский университет «Болашак»",
+   "aliases": [],
+   "city": "Кызылорда",
+   "city_kk": "Қызылорда",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://bolashak-edu.kz/index.php?lang=ru",
+   "name_kk": "Қызылорда «Болашақ» университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://bolashak-edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Не смешивать с №49 Академия «Bolashaq»."
+  },
+  {
+   "id": 19,
+   "catalog_key": "Кокшетауский университет имени Ш. Уалиханова",
+   "aliases": [],
+   "city": "Кокшетау",
+   "city_kk": "Көкшетау",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://shokan.edu.kz/ru/",
+   "name_kk": "Шоқан Уәлиханов атындағы Көкшетау университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://shokan.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 20,
+   "catalog_key": "Костанайский социально-технический университет имени академика Зулхарнай Алдамжар",
+   "aliases": [],
+   "city": "Костанай",
+   "city_kk": "Қостанай",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://kosstu.edu.kz/",
+   "name_kk": "",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "conflict",
+   "source_url": "https://kosstu.edu.kz/",
+   "verification_note": "conflict: name_kk пусто. Имя Алдамжара в официальных материалах записано двумя способами: «Зұлхарнай» и «Зұлқарнай»; вариант не выбран. Мои наблюдения: в заголовке сайта «Зулхарнай», в kk-блоке подвала русской главной «Зулкарнай». Казахская форма названия в kk-блоке: «Академик Зулкарнай Алдамжар атындағы Қостанай әлеуметтік-техникалық университеті» (не внесена в name_kk)."
+  },
+  {
+   "id": 21,
+   "catalog_key": "Sherkhan Murtaza University",
+   "aliases": [],
+   "city": "Тараз",
+   "city_kk": "Тараз",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://htu.edu.kz/ru/",
+   "name_kk": "Ш.Мұртаза атындағы Халықаралық Тараз университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://htu.edu.kz/kk/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Публичная форма — с инициалами. Полная форма «Шерхан Мұртаза…» встречается в официальном документе (по решению владельца) и не выдаётся за юридическое название без устава."
+  },
+  {
+   "id": 22,
+   "catalog_key": "Таразский региональный университет имени М. Х. Дулати (Dulaty University)",
+   "aliases": [],
+   "city": "Тараз",
+   "city_kk": "Тараз",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://talapker.dulaty.kz/",
+   "name_kk": "М.Х. Дулати атындағы Тараз университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://dulaty.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 23,
+   "catalog_key": "Северо-Казахстанский университет имени М. Козыбаева",
+   "aliases": [],
+   "city": "Петропавловск",
+   "city_kk": "Петропавл",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://apply.ku.edu.kz/ru",
+   "name_kk": "М. Қозыбаев атындағы Солтүстік Қазақстан университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://ku.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 24,
+   "catalog_key": "Университет Нархоз (Narxoz University)",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://narxoz.edu.kz/",
+   "name_kk": "",
+   "brand_as_published": "NARXOZ UNIVERSITY",
+   "legal_name_kk": "",
+   "verification_status": "confirmed_brand",
+   "source_url": "https://narxoz.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 25,
+   "catalog_key": "Toraighyrov University",
+   "aliases": [],
+   "city": "Павлодар",
+   "city_kk": "Павлодар",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://tou.edu.kz/ru/",
+   "name_kk": "Торайғыров университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://tou.edu.kz/kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Замечание: на сайте встречаются «Торайгыров» (title) и «Торайғыров» (видимый текст); принята форма «Торайғыров» по решению владельца."
+  },
+  {
+   "id": 26,
+   "catalog_key": "Q University",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://q-university.edu.kz/ru/admissions",
+   "name_kk": "",
+   "brand_as_published": "«Q» University",
+   "legal_name_kk": "",
+   "verification_status": "confirmed_brand",
+   "source_url": "https://q-university.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Написание «Q» с кавычками сохранено. Мной kk-версия сайта не открывалась."
+  },
+  {
+   "id": 27,
+   "catalog_key": "Maqsut Narikbayev University (MNU, бывший КазГЮУ)",
+   "aliases": [],
+   "city": "Астана",
+   "city_kk": "Астана",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://admission.mnu.kz/ru",
+   "name_kk": "",
+   "brand_as_published": "Maqsut Narikbayev University (MNU)",
+   "legal_name_kk": "",
+   "verification_status": "confirmed_brand",
+   "source_url": "https://mnu.kz/kk-kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 28,
+   "catalog_key": "SDU University",
+   "aliases": [],
+   "city": "Каскелен",
+   "city_kk": "Қаскелең",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://sdu.edu.kz/ru/",
+   "name_kk": "",
+   "brand_as_published": "SDU University",
+   "legal_name_kk": "",
+   "verification_status": "confirmed_brand",
+   "source_url": "https://sdu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 29,
+   "catalog_key": "Университет «Туран»",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://turan.edu.kz/ru",
+   "name_kk": "«Тұран» университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://turan.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Отдельная организация, не объединять с №45."
+  },
+  {
+   "id": 30,
+   "catalog_key": "Университет «Мирас»",
+   "aliases": [],
+   "city": "Шымкент",
+   "city_kk": "Шымкент",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://miras.edu.kz/",
+   "name_kk": "",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "unconfirmed",
+   "source_url": "https://miras.edu.kz/",
+   "verification_note": "unconfirmed: name_kk пусто до прямого подтверждения публичного казахского заголовка на miras.edu.kz."
+  },
+  {
+   "id": 31,
+   "catalog_key": "Южно-Казахстанский исследовательский университет имени М. Ауэзова",
+   "aliases": [],
+   "city": "Шымкент",
+   "city_kk": "Шымкент",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://priem.auezov.edu.kz/ru/",
+   "name_kk": "Мұхтар Әуезов атындағы Оңтүстік Қазақстан зерттеу университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://auezov.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 32,
+   "catalog_key": "Zhubanov University",
+   "aliases": [],
+   "city": "Актобе",
+   "city_kk": "Ақтөбе",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://zhubanov.edu.kz/ru/enrollee/category/1/",
+   "name_kk": "Қ. Жұбанов атындағы Ақтөбе өңірлік университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://zhubanov.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 33,
+   "catalog_key": "Жетысуский университет имени Ильяса Жансугурова",
+   "aliases": [],
+   "city": "Талдыкорган",
+   "city_kk": "Талдықорған",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://zhetysu.edu.kz/",
+   "name_kk": "Ілияс Жансүгіров атындағы Жетісу университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://zhetysu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 34,
+   "catalog_key": "Astana International University (AIU)",
+   "aliases": [],
+   "city": "Астана",
+   "city_kk": "Астана",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://aiu.kz/?lang=ru",
+   "name_kk": "Астана халықаралық университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://aiu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 35,
+   "catalog_key": "Astana IT University",
+   "aliases": [],
+   "city": "Астана",
+   "city_kk": "Астана",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://astanait.edu.kz/ru",
+   "name_kk": "",
+   "brand_as_published": "Astana IT University",
+   "legal_name_kk": "",
+   "verification_status": "confirmed_brand",
+   "source_url": "https://astanait.edu.kz/kz/contacts",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 36,
+   "catalog_key": "META University",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://meta.edu.kz/ru/admissions",
+   "name_kk": "",
+   "brand_as_published": "META University",
+   "legal_name_kk": "",
+   "verification_status": "confirmed_brand",
+   "source_url": "https://meta.edu.kz/admissions",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 37,
+   "catalog_key": "Международный казахско-турецкий университет имени Х. А. Ясави (AYU)",
+   "aliases": [],
+   "city": "Туркестан",
+   "city_kk": "Түркістан",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://ayu.edu.kz/ru/",
+   "name_kk": "Қожа Ахмет Ясауи атындағы Халықаралық қазақ-түрік университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://ayu.edu.kz/kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 38,
+   "catalog_key": "Карагандинский национальный исследовательский университет имени академика Е. А. Букетова",
+   "aliases": [],
+   "city": "Караганда",
+   "city_kk": "Қарағанды",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://buketov.edu.kz/ru/",
+   "name_kk": "Академик Е.А. Бөкетов атындағы Қарағанды ұлттық зерттеу университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://buketov.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Слово «ұлттық» сохранено по решению владельца; в исходном мастер-файле оно отсутствовало — к сверке по уставу."
+  },
+  {
+   "id": 39,
+   "catalog_key": "Карагандинский университет Казпотребсоюза",
+   "aliases": [],
+   "city": "Караганда",
+   "city_kk": "Қарағанды",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://www.keu.kz/ru/abiturient.html",
+   "name_kk": "Қазтұтынуодағы Қарағанды университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://www.keu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 40,
+   "catalog_key": "Центрально-Азиатский инновационный университет (CAIU)",
+   "aliases": [],
+   "city": "Шымкент",
+   "city_kk": "Шымкент",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://caiu.edu.kz/adminssions-ru/",
+   "name_kk": "Орталық Азия Инновациялық университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://caiu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 41,
+   "catalog_key": "Шымкентский университет",
+   "aliases": [],
+   "city": "Шымкент",
+   "city_kk": "Шымкент",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://univershu.edu.kz/ru/",
+   "name_kk": "Шымкент университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://univershu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 42,
+   "catalog_key": "Евразийский гуманитарный институт имени А. К. Кусаинова (ЕАГИ)",
+   "aliases": [],
+   "city": "Астана",
+   "city_kk": "Астана",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://egi.edu.kz/ru_ru/abit/",
+   "name_kk": "А.Қ. Құсайынов атындағы Еуразия гуманитарлық институты",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://egi.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 43,
+   "catalog_key": "Восточно-Казахстанский университет имени Сарсена Аманжолова",
+   "aliases": [],
+   "city": "Усть-Каменогорск",
+   "city_kk": "Өскемен",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://vku.edu.kz/?lang=ru",
+   "name_kk": "Сәрсен Аманжолов атындағы Шығыс Қазақстан университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://vku.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 44,
+   "catalog_key": "Алматинский гуманитарно-экономический университет (АГЭУ)",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://ageu.edu.kz/?lang=ru",
+   "name_kk": "Алматы гуманитарлық-экономикалық университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://ageu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 45,
+   "catalog_key": "Университет «Туран-Астана»",
+   "aliases": [],
+   "city": "Астана",
+   "city_kk": "Астана",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://tau-edu.kz/content/postuplenie-2026-2027",
+   "name_kk": "«ТҰРАН-АСТАНА» УНИВЕРСИТЕТІ",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://tau-edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Регистр и кавычки сохранены; отдельная организация, не объединять с №29."
+  },
+  {
+   "id": 46,
+   "catalog_key": "Казахстанский университет инновационных и телекоммуникационных систем (КазИИТУ)",
+   "aliases": [],
+   "city": "Уральск",
+   "city_kk": "Орал",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://kazuits.edu.kz/ru/obuchenie/obrazovatelnye-programmy",
+   "name_kk": "",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "conflict",
+   "source_url": "https://kazuits.edu.kz/kz/okytu/bilim-beru-bagdarlamalary",
+   "verification_note": "conflict: name_kk пусто. На официальном сайте встречаются две формы: «Қазақстан инновациялық және телекоммуникациялық жүйелер университеті» и «Қазақстанның инновациялық және телекоммуникациялық жүйелер университеті». Одна форма не выбрана. Мои наблюдения: в meta-keywords ru- и kk-страниц стоит первая форма."
+  },
+  {
+   "id": 47,
+   "catalog_key": "Западно-Казахстанский инновационно-технологический университет (West University)",
+   "aliases": [],
+   "city": "Уральск",
+   "city_kk": "Орал",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://wkitu.kz/ru/",
+   "name_kk": "Батыс Қазақстан инновациялық-технологиялық университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://wkitu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 48,
+   "catalog_key": "KIMEP University",
+   "aliases": [],
+   "city": "Алматы",
+   "city_kk": "Алматы",
+   "levels": [
+    "B",
+    "M"
+   ],
+   "official_site": "https://www.kimep.kz/ru/",
+   "name_kk": "КИМЭП Университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://www.kimep.kz/kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 49,
+   "catalog_key": "Академия «Bolashaq»",
+   "aliases": [],
+   "city": "Караганда",
+   "city_kk": "Қарағанды",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://bolashaq.edu.kz/abiturient2/specialnosti-akademii/",
+   "name_kk": "«Bolashaq» академиясы",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://bolashaq.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Латинское написание Bolashaq сохранено; не смешивать с №18."
+  },
+  {
+   "id": 50,
+   "catalog_key": "Баишев Университет",
+   "aliases": [],
+   "city": "Актобе",
+   "city_kk": "Ақтөбе",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://bu.edu.kz/",
+   "name_kk": "Баишев Университеті",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://bu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 51,
+   "catalog_key": "Региональный университет инноваций (Regional Innovation University)",
+   "aliases": [],
+   "city": "Шымкент",
+   "city_kk": "Шымкент",
+   "levels": [
+    "B"
+   ],
+   "official_site": "https://riu.edu.kz/",
+   "name_kk": "Аймақтық инновациялық университет",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://riu.edu.kz/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась."
+  },
+  {
+   "id": 52,
+   "catalog_key": "Академия правосудия при Высшем Судебном Совете РК",
+   "aliases": [],
+   "city": "Астана",
+   "city_kk": "Астана",
+   "levels": [
+    "M"
+   ],
+   "official_site": "https://sta.edu.kz/pravila-priema/",
+   "name_kk": "Қазақстан Республикасы Жоғары Сот Кеңесінің жанындағы Сот төрелігі академиясы",
+   "brand_as_published": "",
+   "legal_name_kk": "",
+   "verification_status": "confirmed",
+   "source_url": "https://sta.edu.kz/kk/biz-turaly/",
+   "verification_note": "Форма и статус — по утверждённой владельцем таблице решений от 20.11.2026; источник — URL из таблицы источников. Независимая перепроверка этой формы в данной сборке не выполнялась. Сохранено подчинение Жоғары Сот Кеңесі; уровень — магистратура; докторантура не добавлялась."
+  }
+ ]
+}
