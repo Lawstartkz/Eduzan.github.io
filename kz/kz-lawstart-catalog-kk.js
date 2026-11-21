@@ -1,4 +1,3 @@
-
 /* EduZan — қазақ тіліндегі каталог (kz/kz-catalog.html).
    B, M, O, V деректері өзгеріссіз сақталған.
    Қазақша атаулар kz/universities_kk_names.json файлынан алынады.
@@ -104,7 +103,6 @@ const V={
 "Maqsut Narikbayev University (MNU, бывший КазГЮУ)|Бакалавриат":{d:"04.10.2026",u:"https://admission.mnu.kz/ru/programs/bachelor",f:[["Срок","4 года"],["Стоимость","55 000 ₸ за кредит; 3 300 000 ₸ в год (60 кредитов), 2026"],["Госзаказ","вуз участвует в распределении госзаказа по группе B049 (НЦТ, 2026–2027); места распределяются по группе, а не по конкретной программе"],["Не указано","код ОП, язык обучения"]]},
 "Maqsut Narikbayev University (MNU, бывший КазГЮУ)|Магистратура":{d:"04.10.2026",u:"https://admission.mnu.kz/ru/programs/master",f:[["Группа","M078"],["Срок","указан у каждой программы"],["Не указано","код ОП (код 7M04211 — по реестру ОП epvo.kz), язык обучения, стоимость"],["Госзаказ","отдельно не проверялся"]]}
 };
-
 (function(){
  var KB='Бакалавриат',KM='Магистратура';
  var LV={},LK={};LV[KB]='Бакалавриат';LV[KM]='Магистратура';LK[KB]='B';LK[KM]='M';
@@ -121,7 +119,7 @@ const V={
   var rs=u[2].map(function(x){return [x[0],x[1],x[2]||'',KM]});
   if(host){host.ls=[KB,KM];host.l='both';host.r=host.r.concat(rs)}
   else{items.push({u:u[0],c:u[1],l:KM,r:rs})}});
- var N={};
+ var N={};  // catalog_key / alias -> registry record
  var sel=document.getElementById('city'),list=document.getElementById('list'),cnt=document.getElementById('count'),other=document.getElementById('other'),ol=document.getElementById('olist');
  var st={q:'',c:'',l:''};
  var cities=[].concat(items.map(function(i){return i.c}),O.map(function(o){return o[0]}));
@@ -149,7 +147,7 @@ const V={
    card.appendChild(el('p','meta',cityKk(it.c)+' · '+lvLabel(it,st.l)));
    if(R&&NOTE[R.verification_status])card.appendChild(el('p','meta nm',NOTE[R.verification_status]));
    var site=R&&R.official_site;
-   if(site){var wp=el('p','wl');var wa=el('a','','🌐 Ресми сайт');wa.href=site;wa.target='_blank';wa.rel='noopener noreferrer';wp.appendChild(wa);card.appendChild(wp)}
+   if(site){var wp=el('p','wl');var wa=el('a','','\uD83C\uDF10 Ресми сайт');wa.href=site;wa.target='_blank';wa.rel='noopener noreferrer';wp.appendChild(wa);card.appendChild(wp)}
    function addRows(rs){var ul=el('ul');
     rs.forEach(function(r){var li=el('li');li.appendChild(r[0]?el('code','',r[0]):el('code','nocode','ОП коды бастапқы деректерде көрсетілмеген'));
      var d=ru('div','',r[1]);if(r[2]){d.appendChild(el('em','',r[2]))}
@@ -164,7 +162,13 @@ const V={
      if(v.u){var a=el('a','','Ресми бет');a.href=v.u;a.target='_blank';a.rel='noopener noreferrer';vs.appendChild(a)}
      vb.appendChild(vs);card.appendChild(vb)}});
    list.appendChild(card);shown++;seen[it.u]=1});
-  cnt.textContent=shown?('Негізгі каталогта: ЖОО — '+Object.keys(seen).length+' · бағдарламалар — '+progs+'. Бағдарламалардың жеке жазбалары есептеледі; сабақтас бағдарламалар бөлек белгіленген. «Қосымша тексеру» блогындағы ЖОО бұл көрсеткіштерге кірмейді. Дереккөз: ашық дереккөздер, ең алдымен университеттердің сайттары. «Бағдарлама салыстырылған» белгісі бағдарлама атауы мен коды ЖОО-ның ресми бетімен салыстырылғанын білдіреді, қалған карточкалар тексерілуде.\nШарттар өзгеруі мүмкін — ЖОО-ның ресми сайтынан нақтылаңыз. Жаңартылған: 2026 жылғы 6 қазан.'):'';
+  cnt.textContent=shown?(
+  'Негізгі каталогта: ЖОО — '+Object.keys(seen).length+
+  ' · бағдарламалар — '+progs+
+  '. Бағдарламалардың жеке жазбалары есептеледі; сабақтас бағдарламалар бөлек белгіленген. «Қосымша тексеру» блогындағы ЖОО бұл көрсеткіштерге кірмейді. Дереккөз: ашық дереккөздер, ең алдымен университеттердің сайттары.\n'+
+  '«Бағдарлама салыстырылған» белгісі бағдарлама атауы мен коды ЖОО-ның ресми бетімен салыстырылғанын білдіреді, қалған карточкалар тексерілуде.\n'+
+  'Шарттар өзгеруі мүмкін — ЖОО-ның ресми сайтынан нақтылаңыз. Жаңартылған: 2026 жылғы 6 қазан.'
+ ):'';
   if(!shown){list.appendChild(el('p','empty','Ештеңе табылмады. Басқа сұранысты көріңіз немесе сүзгілерді тазалаңыз.'))}
   ol.textContent='';var any=0;
   O.forEach(function(o){if(st.c&&o[0]!==st.c)return;if(q&&norm(o[0]+' '+cityKk(o[0])+' '+o[1]).indexOf(q)<0)return;
