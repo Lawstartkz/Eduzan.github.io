@@ -1,6 +1,4 @@
-/* LAWSTART: сценарии страницы «Международные возможности». Перенесены без изменений из встроенных скриптов прежней главной страницы:
-   1) фильтры программ Венгрии и копирование шаблона письма; 2) копирование образцов, чек-лист мотивационного письма, планировщик проекта;
-   3) автоматическое закрытие просроченного срока Kectil (данные в #kectil-config). */
+/* LAWSTART: сценарии страницы «Международные возможности»: фильтры, копирование учебных образцов, чек-лист и планировщик. Статус заявок не определяется автоматически; актуальные условия проверяются на официальной странице организатора. */
 (function(){var cards=[].slice.call(document.querySelectorAll('#nl-list .nl-card')),st={need:'all',level:'all',fund:false};
 function apply(){var n=0;cards.forEach(function(c){var ok=(st.need==='all'||c.dataset.need===st.need)&&(st.level==='all'||c.dataset.level===st.level)&&!st.fund;c.hidden=!ok;if(ok)n++});
 var e=document.getElementById('nl-empty');if(e)e.hidden=n!==0;var k=document.getElementById('nl-count');if(k)k.textContent='Показано программ: '+n+' из '+cards.length+'.'}
@@ -24,10 +22,4 @@ if(pc)pc.addEventListener('click',function(){var out=[];f.forEach(function(id,i)
 if(px)px.addEventListener('click',function(){f.forEach(function(id){document.getElementById(id).value=''});pm.textContent='Поля очищены.'});
 })();
 
-(function(){
-/* Kectil: automatic closing of the stale deadline */
-try{var c=JSON.parse(document.getElementById('kectil-config').textContent);var now=new Date(),pad=function(n){return n<10?'0'+n:''+n};var today=now.getFullYear()+'-'+pad(now.getMonth()+1)+'-'+pad(now.getDate());
- var st=document.getElementById('kectil-status'),dl=document.getElementById('kectil-deadline'),ap=document.getElementById('kectil-apply');
- if(today>c.deadline){if(st)st.textContent='Набор '+c.cycle+': срок, указанный организатором, истёк';if(dl)dl.textContent='Срок подачи заявок '+c.cycle+' года ('+c.deadlineText+') прошёл. Новые даты можно узнать только на официальном сайте.';if(ap){ap.textContent='Проверить новый набор на сайте организатора';ap.href=c.source||'https://kectil.com/'}}
- var vd=new Date(c.verified+'T00:00:00');if((now-vd)/86400000>400){var sl=document.getElementById('kectil-stale');if(sl){sl.textContent='Данные о программе давно не обновлялись. Проверьте сроки и условия на официальном сайте.';sl.hidden=false}}}catch(e){}
-})();
+(function(){ /* EduZan policy: never infer application status from stored dates. */ try{var ap=document.getElementById('kectil-apply');if(ap){ap.textContent='Проверить актуальные условия на сайте организатора';ap.href='https://kectil.com/';}}catch(e){} })();
