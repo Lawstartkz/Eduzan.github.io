@@ -7,11 +7,20 @@
   var det=[].slice.call(document.querySelectorAll('#english details')).filter(function(d){return d.querySelector('.t')});
   var openInit=det.map(function(d){return d.open});
   var reduce=false;try{reduce=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
-  function norm(x){return String(x).toLowerCase().replace(/ё/g,'е').replace(/\s+/g,' ').trim()}
+  function normalizeLegalSearch(value){
+    return String(value ?? '')
+      .normalize('NFKC')
+      .toLocaleLowerCase('en')
+      .replace(/ё/g, 'е')
+      .replace(/[’‘`]/g, "'")
+      .replace(/[^\p{L}\p{N}]+/gu, ' ')
+      .trim()
+      .replace(/\s+/g, ' ');
+  }
   /* the search index is built once from the cards that are already on the page */
   var idx=items.map(function(it){
     var b=it.querySelector('b'),tr=it.querySelector('.tr');
-    return {el:it,text:norm(it.textContent),head:norm((b?b.textContent:'')+' '+(tr?tr.textContent:''))};
+    return {el:it,text:normalizeLegalSearch(it.textContent),head:normalizeLegalSearch((b?b.textContent:'')+' '+(tr?tr.textContent:''))};
   });
   function has(text,v){
     if(text.indexOf(v)>=0)return true;
@@ -21,7 +30,7 @@
     return true;
   }
   function run(){
-    var raw=q.value,v=norm(raw),n=0,nHead=0,first=null,firstHead=null;
+    var raw=q.value,v=normalizeLegalSearch(raw),n=0,nHead=0,first=null,firstHead=null;
     idx.forEach(function(r){
       var ok=!v||has(r.text,v);
       r.el.hidden=!ok;
@@ -45,7 +54,7 @@
   form.addEventListener('submit',function(ev){
     ev.preventDefault();
     var f=run();
-    if(!norm(q.value)){msg.textContent='Введите слово или фразу, например indemnify.';q.focus();return}
+    if(!normalizeLegalSearch(q.value)){msg.textContent='Введите слово или фразу, например indemnify.';q.focus();return}
     if(f){try{f.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'})}catch(e){f.scrollIntoView()}}
     try{q.blur()}catch(e){}
   });
